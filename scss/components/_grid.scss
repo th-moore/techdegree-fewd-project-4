@@ -1,7 +1,7 @@
 // Separate components ==========================
 
 .grid__row {
-  @include flexy($dir: column, $wrap: wrap);
+  @include flexy($dir: row, $wrap: nowrap, $just: space-around);
   margin: 20px 0px;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .grid__col--12 {
-  @include flexy($disp: flex, $wrap: wrap);
+  @include flexy($dir: row, $disp: flex, $wrap: wrap);
 }
 
 .grid__col--6 {
