@@ -1,16 +1,18 @@
-.img--logo {
-	display: block;
-	margin: auto;
-}
-
-.img--avatar {
-	display: block;
-	margin: 20px auto;
-}
-
-.img--frame {
-	display: block;
-	padding: 10px;
-	border: 1px solid $color-text-default;
-	margin: 0 auto;
+.img{
+	&--avatar {
+		@extend %img;
+		@media (mid-width: $screen-l) {
+			margin: 0 auto;
+		}
+	}
+	&--logo{
+		@extend %img;	
+	}
+	&--frame {
+		width: 90%;
+		margin: 0 auto;
+		padding: 0.8rem;
+		display: block;
+		border: 1px solid lightgray;
+	}
 }

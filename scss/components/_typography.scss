@@ -10,13 +10,23 @@
     font-size: .9em;
     font-weight: normal;
     width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-l) {
+      font-size: 1.1em;
+    }
 }
+
+// Inline link span styles ======================
 
 .link {
     color: $color-default;
     font-weight: bold;
     text-decoration: none;
 }
+
+// Blockquote styles ============================
 
 .blockquote {
     margin: 30px 20px;
@@ -27,4 +37,14 @@
     font-size: 1.3em;
     line-height: 1.3;
     color: $color-text-default;
+}
+
+// Card styles ==================================
+
+.card {
+  padding-bottom: 10px;
+  
+  @media (min-width: $screen-l) {
+    padding-bottom: 20px;
+  }
 }

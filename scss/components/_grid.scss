@@ -1,11 +1,29 @@
-// Separate components ==========================
+// Grid container ===============================
 
 .grid__row {
-  @include flexy($dir: row, $wrap: nowrap, $just: space-around);
-  margin: 20px 0px;
+  margin: 30px 0px;
+
+  @media (min-width: $screen-l) {
+  @include flexy($disp: flex, $dir: row, $wrap: nowrap, $just: space-around);
+  }
 }
 
-// Grid squares =================================
+// Calculate grid columns =======================
+
+@media (min-width: $screen-l) {
+  @for $i from 1 through $g-col-count {
+
+    $context: g-context($g-col-width, $g-col-count);
+    $target: ($g-col-width * $i) + ($i - 10);  
+  
+    // Generate grid modifier classes
+    .grid__col--#{$i} {
+      width: percentage($target / $context);
+    }
+  }
+}
+
+// Grid squares styling =========================
 
 .theme__colors.grid {
   &__col--12 {
@@ -42,24 +60,4 @@
     @include grid-block;
     background-color: lighten($color-info, 10%);
   }
-}
-
-.grid{
-	&__col--12,
-	&__col--9,
-	&__col--8,
-	&__col--7,
-	&__col--5,
-	&__col--4,
-	&__col--3 {
-		width: 100%;
-	}
-}
-
-.grid__col--12 {
-  @include flexy($dir: row, $disp: flex, $wrap: wrap);
-}
-
-.grid__col--6 {
-  width: 30%;
 }

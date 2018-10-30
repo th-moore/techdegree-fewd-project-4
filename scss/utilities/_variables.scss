@@ -1,12 +1,12 @@
-// Color Variables ==============================
+// Color variables ==============================
 
 $color-white: #ffffff;
 
-// Text Color ===================================
+// Text color ===================================
 
 $color-text-default: #585858;
 
-// Button Main Colors ===========================
+// Button main colors ===========================
 
 $color-default: #51DDFC;
 $color-secondary: #58E1C1;
@@ -16,14 +16,21 @@ $color-error: #E4757A;
 $color-warning: #FD7856;
 $color-info: #927BC1;
 
-// Font Stack ===================================
+// Font stack ===================================
 
 $primary-font-stack: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
-// Max Width ====================================
+// Grid variables ===============================
 
-$max-width: 1000px;
+$g-col-width: 65px;
+$g-gutter-width: 20px;
+$g-col-count: 12;
+$g-cont-maxw: 1050px;
+
+// Max width ====================================
+
+$max-width: 780px;
 
 // Breakpoints ==================================
 
-$screen-sm: 769px;
+$screen-l: 769px;

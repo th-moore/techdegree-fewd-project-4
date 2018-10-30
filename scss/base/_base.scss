@@ -1,20 +1,28 @@
 * {
-    box-sizing: border-box;
-    border: 1px solid red;
+  box-sizing: border-box;
 }
 
 p {
-    line-height: 1.5;
-    color: $color-text-default;
-    font-size: .9em;
+  line-height: 1.5;
+  color: $color-text-default;
+  font-size: .9em;
+
+  @media (min-width: $screen-l) {
+    line-height: 1.6;
+    font-size: 1.1em;
+  }
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 .container {
-    padding: 0 1em;
-    max-width: $max-width;
-    font-family: $primary-font-stack;
+  padding: 0 1em;
+  max-width: $max-width;
+  font-family: $primary-font-stack;
+  
+  @media (min-width: $screen-l) {
+    margin: 0 auto;
+  }
 }

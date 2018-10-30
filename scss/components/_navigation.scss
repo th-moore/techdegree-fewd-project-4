@@ -1,28 +1,54 @@
 .nav {
-    margin: 0;
-    padding: 0;
-    font-size: .9em;
+  margin: 30px 0px;
+  padding: 0;
+  font-size: .9em;
 }
 
 .nav__item {
-    text-align: center;
-    margin: 2px;
-    padding: .8em;
-    border-radius: 4px;
-}
+  text-align: center;
+  margin: 2px;
+  padding: .8em;
+  border-radius: 4px;
 
-.nav__item:hover {
+  a {
+    text-decoration: none;
+    color: $color-text-default;
+    
+    &:visited {
+      color: $color-text-default;
+    }
+  }
+  
+  &:hover {
     background-color: $color-secondary;
     cursor: pointer;
     a {
         color: $color-white;
     }
-}
+  }
 
-.nav__item:active {
+  &:active {
     background-color: darken($color-secondary, 10%);
     cursor: pointer;
     a {
         color: $color-white;
     }
+  }
+}
+
+@media (min-width: $screen-l) {
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .nav__item {
+    font-size: 1.1em;
+  }
+
+  .grid__col--9 {
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+  }
 }
