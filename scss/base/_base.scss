@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+p {
+    line-height: 1.5;
+    color: $color-text-default;
+    font-size: .9em;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    padding: 0 1em;
+    max-width: $max-width;
+    font-family: $primary-font-stack;
+}

@@ -1,0 +1,31 @@
+// Style form elements ==========================
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.form__input {
+    border-bottom: 4px solid $color-secondary;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    margin: 20px;
+    padding: 10px;
+}
+
+.form__input::placeholder {
+    font-weight: bold;
+}
+
+.form__input:focus {
+    outline: none;
+    border-bottom: 4px solid $color-default;
+}
+
+.form__label--hidden {
+    display: none;
+    width: 100%;
+}

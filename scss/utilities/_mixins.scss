@@ -1,0 +1,28 @@
+// Creat Flexbox container ======================
+
+@mixin flexy($disp: null, $dir: null, $wrap: null, $just: null) {
+  display: $disp;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+}
+
+// Default button style =========================
+
+@mixin button {
+  width: 100%;
+  height: 44px;
+  border-radius: 6px;
+  margin: 10px 0px;
+  color: $color-white;
+  text-transform: uppercase;
+  cursor: pointer; 
+  font-weight: 500;
+}
+
+@mixin grid-block {
+  height: 44px;
+  border-radius: 6px;
+  margin: 4px 0px;
+  font-weight: 500;
+}

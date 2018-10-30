@@ -1,0 +1,28 @@
+.nav {
+    margin: 0;
+    padding: 0;
+    font-size: .9em;
+}
+
+.nav__item {
+    text-align: center;
+    margin: 2px;
+    padding: .8em;
+    border-radius: 4px;
+}
+
+.nav__item:hover {
+    background-color: $color-secondary;
+    cursor: pointer;
+    a {
+        color: $color-white;
+    }
+}
+
+.nav__item:active {
+    background-color: darken($color-secondary, 10%);
+    cursor: pointer;
+    a {
+        color: $color-white;
+    }
+}

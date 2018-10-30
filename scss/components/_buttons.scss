@@ -1,0 +1,43 @@
+// Base button colors ===========================
+
+.btn {  
+  &--default {
+    @include button;
+    background-color: $color-default;
+    &:hover {
+      background-color: lighten($color-default, 10%);
+    }
+  }
+
+  &--success {
+    @include button;
+    background-color: $color-success;
+    &:hover {
+      background-color: lighten($color-success, 10%);
+    }
+  }
+
+  &--error {
+    @include button;
+    background-color: $color-error;
+    &:hover {
+      background-color: lighten($color-error, 10%);
+    }
+  }
+
+  &--warning {
+    @include button;
+    background-color: $color-warning;
+    &:hover {
+      background-color: lighten($color-warning, 10%);
+    }
+  }
+
+  &--info {
+    @include button;
+    background-color: $color-info;
+    &:hover {
+      background-color: lighten($color-info, 10%);
+    }
+  }
+}
