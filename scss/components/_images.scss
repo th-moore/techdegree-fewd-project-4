@@ -4,7 +4,11 @@
     @extend %img;
     padding: 0.8rem;
 		@include mq(medium) {
-			margin: 0 auto;
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 199px;
+      max-height: 199px;
 		}
 	}
   
@@ -13,10 +17,18 @@
 	}
   
   &--frame {
-		width: 90%;
+    @extend %img;
+    width: 90%;
 		margin: 0 auto;
 		padding: 0.8rem;
 		display: block;
-		border: 1px solid lightgray;
-	}
+    border: 1px solid lightgray;
+    @include mq(medium) {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 410px;
+      max-height: 200px;
+  }
+}
 }

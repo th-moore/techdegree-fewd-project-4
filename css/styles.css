@@ -1,4 +1,4 @@
-.img--logo, .img--avatar {
+.img--frame, .img--logo, .img--avatar {
   display: block;
   margin: 0 auto;
   max-width: 100%;
@@ -754,7 +754,11 @@ ul {
 }
 @media (min-width: 769px) {
   .img--avatar {
-    margin: 0 auto;
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 199px;
+    max-height: 199px;
   }
 }
 .img--frame {
@@ -763,6 +767,15 @@ ul {
   padding: 0.8rem;
   display: block;
   border: 1px solid lightgray;
+}
+@media (min-width: 769px) {
+  .img--frame {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 199px;
+    max-height: 199px;
+  }
 }
 
 .nav {
