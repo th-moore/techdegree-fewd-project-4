@@ -1,10 +1,37 @@
-// Creat Flexbox container ======================
+// Mixin to create a Flexbox container ==========
 
 @mixin flexy($disp: null, $dir: null, $wrap: null, $just: null) {
   display: $disp;
   flex-direction: $dir;
   flex-wrap: $wrap;
   justify-content: $just;
+}
+
+// Media query mixin ============================
+
+@mixin mq($break) {
+  
+  @if $break == "small" {
+    @media (min-width: $screen-s) and (max-width: $screen-m) {
+      @content;
+    }
+  }
+
+  @else if $break == "medium" {
+    @media (min-width: $screen-m + 1) {
+      @content;
+    }
+  }
+
+  @else if $break == "large" {
+    @media (min-width: $screen-l) {
+      @content;
+    }
+  }
+
+  @else {
+    @error "Whoops! No value could be retrieved for '#{$break}'.";
+  }
 }
 
 // Default button style =========================
@@ -14,17 +41,35 @@
   height: 44px;
   border-radius: 6px;
   border: none;
-  margin: 10px 0px;
+  margin: 10px 15px;
   color: $color-white;
   text-transform: uppercase;
   cursor: pointer; 
   font-weight: 500;
+
+  @include mq(medium) {
+    width: 140px;
+    
+    &[type=submit] {
+      width: 100%;
+    }
+  }
 }
 
 @mixin grid-block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   height: 44px;
   border-radius: 6px;
   margin: 4px 0px;
+  padding: 10px 10px;
+  font-size: .9em;
   font-weight: 500;
-  text-align: center;
+  color: $color-text-default;
+
+  @include mq(medium) {
+    text-align: center;
+    justify-content: space-around;
+  }
 }

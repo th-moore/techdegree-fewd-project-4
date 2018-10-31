@@ -1,16 +1,46 @@
-// Grid container ===============================
+// Grid row container ===========================
 
 .grid__row {
   margin: 30px 0px;
 
-  @media (min-width: $screen-l) {
+  @include mq(medium) {
   @include flexy($disp: flex, $dir: row, $wrap: nowrap, $just: space-around);
+  }
+}
+
+.grid {
+  &__col--12 {
+    @include flexy($disp: flex, $dir: row, $wrap: wrap, $just: space-evenly);
+  }
+
+  &__col--8 {
+    @include flexy($disp: flex, $dir: row, $wrap: wrap, $just: space-evenly);
+  }
+
+  &__col--7 {
+    @include flexy($disp: flex, $dir: row, $wrap: wrap, $just: space-evenly); 
+  }
+
+  &__col--6 {
+    @include flexy($disp: flex, $dir: row, $wrap: wrap, $just: space-evenly);
+  }
+
+  &__col--5 {
+    @include flexy($disp: flex, $dir: row, $wrap: wrap, $just: space-evenly);
+  }
+
+  &__col--4 {
+    @include flexy($disp: flex, $dir: row, $wrap: wrap, $just: space-evenly);
+  }
+
+  &__col--3 {
+    @include flexy($disp: flex, $dir: row, $wrap: wrap, $just: space-evenly);
   }
 }
 
 // Calculate grid columns =======================
 
-@media (min-width: $screen-l) {
+@include mq(medium) {
   @for $i from 1 through $g-col-count {
 
     $context: g-context($g-col-width, $g-col-count);
@@ -23,7 +53,7 @@
   }
 }
 
-// Grid squares styling =========================
+// Styling grid squares =========================
 
 .theme__colors.grid {
   &__col--12 {

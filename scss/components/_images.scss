@@ -1,14 +1,18 @@
-.img{
-	&--avatar {
-		@extend %img;
-		@media (mid-width: $screen-l) {
+.img {
+  
+  &--avatar {
+    @extend %img;
+    padding: 0.8rem;
+		@include mq(medium) {
 			margin: 0 auto;
 		}
 	}
-	&--logo{
+  
+  &--logo{
 		@extend %img;	
 	}
-	&--frame {
+  
+  &--frame {
 		width: 90%;
 		margin: 0 auto;
 		padding: 0.8rem;

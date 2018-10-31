@@ -1,8 +1,17 @@
+// Nav Bar styling ==============================
+
 .nav {
   margin: 30px 0px;
   padding: 0;
   font-size: .9em;
+
+  @include mq(medium) {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
+
+// Nav Item styling =============================
 
 .nav__item {
   text-align: center;
@@ -34,21 +43,8 @@
         color: $color-white;
     }
   }
-}
 
-@media (min-width: $screen-l) {
-  .nav {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .nav__item {
+  @include mq(medium) {
     font-size: 1.1em;
-  }
-
-  .grid__col--9 {
-    align-items: center;
-    justify-content: flex-end;
-    display: flex;
   }
 }
